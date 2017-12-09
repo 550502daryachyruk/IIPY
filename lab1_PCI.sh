@@ -1,2 +1,2 @@
 #! /bin/bash
-lspci -t -vv
+lspci -nn | cut -f 3- -d ':' |cut -b 2- |sed 's/(.*)//'
